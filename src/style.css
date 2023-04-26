@@ -51,6 +51,7 @@ h1 {
 
 li {
   padding: 5px;
+  text-transform: capitalize;
 }
 
 li:nth-child(even) {
