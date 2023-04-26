@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Leader Board</title>
+</head>
+<body>
+    <main class="">
+        <nav class="bg-light-grey p-10">
+            <header class="mx-8pc">
+                <div class="text-center p-10 font-18">
+                    A Web page
+                </div>
+                <div class="navigation w-100pc d-flex spc-btw pb-20">
+                    <div class="d-flex gap-20">
+                        <button class="nav-btn bg-light-grey" type="button">
+                             <img src="../images/previous.png" alt="back">
+                        </button>
+                        <button class="nav-btn bg-light-grey" type="button">
+                            <img src="../images/next.png" alt="next">
+                        </button>
+                        <button class="nav-btn bg-light-grey" type="button">
+                            <img src="../images/cross.png" alt="close">
+                        </button>
+                        <button class="nav-btn bg-light-grey">
+                            <img src="../images/up.png" alt="go">
+                        </button>
+                    </div>
+                    <input class="url-bar" type="url" name="url" id="url"
+                        placeholder="https://"
+                        pattern="https://.*" size="30"
+                        required>
+                     <span class="search d-flex align-center">
+                        <i class="fa-solid fa-magnifying-glass px-5" ></i>
+                        <input type="search" name="search" id="search">
+                    </span>   
+                    
+                </div>
+            </header>
+        </nav>
+        <section>
+            <div class="container mx-8pc">
+                <h1 class="title">Leader Board</h1>
+                <div class="mx-5pc d-flex pb-20 pt-40 cta">
+                    <div class="scores w-50pc">
+                        <div class="refresh d-flex spc-btw ">
+                            <h2 class="">Refresh Scores</h2>
+                            <button class="py-5 px-16 box-shadow" type="button">Refresh</button>
+                        </div>
+                        <div>
+                            <ul id="score-data" class="score-data max-w-400">
+                                <li>Name: 100</li>
+                                <li>Name: 100</li>
+                                <li>Name: 100</li>
+                                <li>Name: 100</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-50pc">
+                        <div class="user-input">
+                            <h2 class="d-flex">Add your score</h2>
+                        </div>
+                        <div>
+                            <form class="d-flex fd-col" action="">
+                                <div>
+                                    <label for="name"></label>
+                                    <input id="user-name" class="mb-20 w-50pcx p-5" type="text" placeholder="Your name" required>
+                                <div>
+                                    <label for="score"></label>
+                                    <input id="score" class="mb-20 w-50pcx p-5" type="number" placeholder="Your score" required>
+                                </div>
+                                <div class="d-flex justify-cont-end w-50pcx">
+                                    <button id="submit" class="py-5 px-16 box-shadow" type="button">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer bg-light-grey">
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
