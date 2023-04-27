@@ -1,6 +1,5 @@
 // Method to create and render new element
-const createNewElement = () => {
-  const getData = JSON.parse(localStorage.getItem('userData')) || [];
+const createNewElement = (getData) => {
   const ulTag = document.getElementById('score-data');
 
   while (ulTag.hasChildNodes()) {
@@ -9,7 +8,7 @@ const createNewElement = () => {
 
   for (let i = 0; i < getData.length; i += 1) {
     const liTag = document.createElement('li');
-    liTag.innerHTML = `${getData[i].name}: ${getData[i].score}`;
+    liTag.innerHTML = `${getData[i].user}: ${getData[i].score}`;
     ulTag.appendChild(liTag);
   }
 };
