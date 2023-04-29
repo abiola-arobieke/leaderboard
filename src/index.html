@@ -7,60 +7,80 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Leader Board</title>
 </head>
-<body>
-    <main class="">
-        <nav class="bg-light-grey p-10">
-            <header class="mx-8pc">
-                <div class="text-center p-10 font-18">
-                    A Web page
+<body id="body">
+    <main>
+         <!-- pop up modal -->
+        <div id="overlay" class="modal-overlay">
+            <div id="modal" class="modal">
+                <div class="mb-20">
+                    <i id="close" class="fa-solid fa-xmark text-dark"></i>
                 </div>
-                <div class="navigation w-100pc d-flex spc-btw pb-20">
-                    <div class="d-flex gap-20">
-                        <button class="nav-btn bg-light-grey" type="button">
-                             <img src="../images/previous.png" alt="back">
-                        </button>
-                        <button class="nav-btn bg-light-grey" type="button">
-                            <img src="../images/next.png" alt="next">
-                        </button>
-                        <button class="nav-btn bg-light-grey" type="button">
-                            <img src="../images/cross.png" alt="close">
-                        </button>
-                        <button class="nav-btn bg-light-grey">
-                            <img src="../images/up.png" alt="go">
-                        </button>
+                <div class="d-flex modal-form">
+                    <div id="modal-title font-18 text-dark" >Add Game</div>
+                    <input id="new-game"  type="text">
+                    <div class="d-flex justify-cont-end">
+                        <button id="add-new" class="py-5 px-16 box-shadow" type="button">Add</button>
                     </div>
-                    <input class="url-bar" type="url" name="url" id="url"
-                        placeholder="https://"
-                        pattern="https://.*" size="30"
-                        required>
-                     <span class="search d-flex align-center">
-                        <i class="fa-solid fa-magnifying-glass px-5" ></i>
-                        <input type="search" name="search" id="search">
-                    </span>   
+                </div>
+            </div>
+        </div>
+
+        <!-- navigation -->
+        <nav class="bg-dark py-20">
+            <header class="mx-8pc">
+                <div class="navigation w-100pc d-flex spc-btw">
+                    <div class="d-flex spc-btw">
+                        <a id="logo" href="#"> ArB </a>
+                        <div class="menu pill game-title text-white">
+                             Add or select game
+                        </div>
+                        <button class="menu text-dark b-none" type="button">
+                            <i class="fa-solid fa-bars"></i>
+                       </button>
+                    </div>
+                    <div id="" class="md-show pill pill-sm game-title capitalize text-white">
+                            Add or select game
+                    </div>
+                    <div class="md-show gap-20">
+                        <button id="games" class="nav-btn b-none bg-dark text-dark" type="button">
+                            <span class="nav-link">Games</span>
+                            <div id="all-games" class="all-games hide">
+                                <div class="p-5">Volley</div>
+                            </div>
+                        </button>
+                        <button class=" nav-btn b-none bg-dark text-dark" type="button">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </button>
+                        <button id="add-games" class="add-game bg-dark" type="button">
+                           <span>Add Game</span> 
+                        </button>
+                    </div> 
                 </div>
             </header>
         </nav> 
+
+        <!-- banner -->
         <section>
             <div class="container mx-8pc">
-                <h1 class="title">Leader Board</h1>
+                <h1 class="title text-white">Leader Board</h1>
                 <div class="mx-5pc d-flex pb-20 pt-40 cta">
                     <div class="scores w-50pc">
                         <div class="refresh d-flex spc-btw ">
-                            <h2 class="">Refresh Scores</h2>
+                            <h2 class="text-white">Refresh Scores</h2>
                             <button id="btn-refresh" class="py-5 px-16 box-shadow" type="button">Refresh</button>
                         </div>
                         <div>
-                            <ul id="score-data" class="score-data max-w-400">
+                            <ul id="score-data" class="score-data max-w-400 text-white">
                                 <div>Add score or click the refresh button to get all scores</div>
                             </ul>
                         </div>
                     </div>
                     <div class="w-50pc">
                         <div class="user-input">
-                            <h2 class="d-flex">Add your score</h2>
+                            <h2 class="d-flex text-white">Add your score</h2>
                         </div>
                         <div>
-                            <form class="d-flex fd-col" action="">
+                            <form class="d-flex fd-col" action="#">
                                 <div>
                                     <label for="name"></label>
                                     <input id="user-name" class="mb-20 w-50pcx p-5" type="text" placeholder="Your name" required>
@@ -78,7 +98,39 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             </div>
         </section>
         <footer>
-            <div class="footer bg-light-grey">
+            <div class="footer bg-dark pb-50">
+                <h5 id="contact" class="text-center font-24">Contact</h5>
+                <div class="d-flex mx-8pc cta">
+                    <div class="w-50pcx">
+                        <div class="mb-10 text-dark">
+                            <i class="fa-solid fa-phone"></i> 
+                             <span class="font-18 ">+234 813 004 4923</span>
+                        </div>
+                        <div class="text-dark">
+                            <i class="fa-solid fa-envelope mb-20"></i>
+                             <span class="font-18">abiola.arobieke@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="w-50pcx">
+                        <ul class="social d-flex">
+                            <li>
+                                <a class="text-dark" href="https://github.com/abiola-arobieke">
+                                    <i class="social-icon fa-brands fa-square-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-dark" href="https://twitter.com/abiola_arobieke">
+                                    <i class="social-icon fa-brands fa-square-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-dark" href="https://linkedin.com/in/abiola-arobieke">
+                                    <i class="social-icon fa-brands fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </footer>
     </main>
