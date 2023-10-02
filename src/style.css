@@ -135,6 +135,10 @@ li {
   color: #242932;
 }
 
+.score-data > li:nth-child(odd) {
+  background-color: #1c3050;
+}
+
 input[type='search'] {
   border: none;
   width: 100%;
